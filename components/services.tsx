@@ -1,4 +1,4 @@
-import { Baby, GraduationCap, Users } from "lucide-react"
+import { Baby, GraduationCap, Users, HeartPulse } from "lucide-react"
 
 const serviceGroups = [
   {
@@ -34,6 +34,19 @@ const serviceGroups = [
       "Desarrollo humano",
     ],
   },
+  {
+    icon: HeartPulse,
+    audience: "Intervención",
+    title: "Intervención en crisis",
+    items: [
+      "Atención breve, intensiva y de urgencia",
+      "Asistencia a domicilio particular",
+      "Alteraciones nerviosas",
+      "Ansiedad y miedos",
+      "Eventos traumáticos",
+      "Situaciones que impidan temporalmente acudir al consultorio",
+    ],
+  },
 ]
 
 export function Services() {
@@ -43,16 +56,18 @@ export function Services() {
         <span className="text-sm font-medium uppercase tracking-widest text-primary">
           Servicios
         </span>
+
         <h2 className="mt-3 text-balance font-serif text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           Acompañamiento para cada etapa de la vida
         </h2>
+
         <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
           Atención psicológica personalizada para niños, adolescentes y adultos,
           desde un enfoque cálido, profesional y basado en la educación familiar.
         </p>
       </div>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {serviceGroups.map((group) => (
           <article
             key={group.audience}
@@ -61,16 +76,25 @@ export function Services() {
             <span className="flex size-12 items-center justify-center rounded-xl bg-accent text-accent-foreground">
               <group.icon className="size-6" aria-hidden="true" />
             </span>
+
             <span className="mt-5 text-sm font-medium uppercase tracking-widest text-primary">
               {group.audience}
             </span>
+
             <h3 className="mt-1 font-serif text-xl font-semibold text-card-foreground">
               {group.title}
             </h3>
+
             <ul className="mt-4 space-y-2.5">
               {group.items.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-muted-foreground">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-muted-foreground"
+                >
+                  <span
+                    className="mt-2 size-1.5 shrink-0 rounded-full bg-primary"
+                    aria-hidden="true"
+                  />
                   {item}
                 </li>
               ))}
