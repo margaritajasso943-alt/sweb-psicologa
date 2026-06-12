@@ -8,7 +8,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
         <div className="flex flex-col gap-6">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
-            Licenciada en Psicología · Posgrado en Educación Familiar
+            Licenciada en Psicología · Posgrado en Ciencias de la Educación Familiar
           </span>
           <h1 className="text-balance font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Asesoría psicológica para niños, adolescentes y adultos
